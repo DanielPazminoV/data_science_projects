@@ -1,7 +1,6 @@
 # Climate change projections for Ecuador
 
-![spatial_example](spatial_example.png)
-<!--![time_series](time_series.png) -->
+![climate_change_projections_Ecuador](climate_change_projections_Ecuador.png)
 
 ## Introduction
 
