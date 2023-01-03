@@ -11,7 +11,8 @@ and two climate change scenarios (rcp 4.5 and rcp 8.5).
 
 ## Data
 
-ARMENTA, Guillermo (2016). Análisis de tendencias climáticas y evetnos climáticos extremos para Ecuador (reporte técnico).
+Technical report: ARMENTA, Guillermo (2016). Análisis de tendencias climáticas y eventos climáticos extremos para Ecuador.
+Files formats: NetCDF.
 
 ## Table of Contents
 
