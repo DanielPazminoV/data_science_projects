@@ -19,7 +19,7 @@ The analyses comprised two periods (2011-2040 and 2041-2070) and two climate cha
 
 Directory | Contents 
 ------------ | ------------- 
-[figures](https://github.com/DanielPazminoV/geospatial_analysis/tree/main/climate_projections_ecuador/figures) | Nine figures. Eight griddded precipitation anomaly maps and one mean temperature time series plo              
+[figures](https://github.com/DanielPazminoV/geospatial_analysis/tree/main/climate_projections_ecuador/figures) | Nine figures. Eight griddded precipitation anomaly maps and one mean temperature time series plot              
 [scripts](https://github.com/DanielPazminoV/geospatial_analysis/tree/main/climate_projections_ecuador/scripts) | Two script folders: data analysis and data vizualizations
 
 ## Computing environment
