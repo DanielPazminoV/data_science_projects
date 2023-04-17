@@ -13,7 +13,7 @@ Explore urban heat island effect in Quito, Ecuador.
 
 ## Data
 
-* MODIS land cover (LC), the MODIS land surface temperature (LST) and with the USGS ground elevation (ELV) data.
+* MODIS land cover (LC), the MODIS land surface temperature (LST) and USGS ground elevation (ELV) data.
 
 ## Computing environment
 
