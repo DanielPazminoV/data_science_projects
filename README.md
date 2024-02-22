@@ -1,5 +1,5 @@
-# geospatial_analysis
-Contains independent geospatial data analysis projects
+# Data Science Projects
+Contains independent data science projects
 
 
 Project name | Description | Computing environment/ Libraries used
