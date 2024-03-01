@@ -134,32 +134,151 @@ def dataframe_de_resultados(df, n, function, k, metric):
 resultado_final = dataframe_de_resultados(datos_companias_escalado, indice, get_knn, 10, "euclidean")
 
 resultado_final = resultado_final.rename({'cia_imvalores': 'Empresas en Mercado de Valores', 
-                                          'ingresos_ventas': 'Ingresos por Ventas',
-                                          'activos': 'Activos',
+                                          'ingresos_ventas': 'Ingresos por Ventas (USD)',
+                                          'activos': 'Activos (USD)',
                                           'n_empleados': 'Número de Empleados',
-                                          'ingresos_totales': 'Ingresos Totales',
-                                          'utilidad_ejercicio': 'Utilidad del Ejercicio',
-                                          'total_gastos': 'Total de Gastos',
-                                          'patrimonio': 'Patrimonio',
-                                          'utilidad_an_imp': 'Utilidad Antes de Impuestos',
+                                          'ingresos_totales': 'Ingresos Totales (USD)',
+                                          'utilidad_ejercicio': 'Utilidad del Ejercicio (USD)',
+                                          'total_gastos': 'Total de Gastos (USD)',
+                                          'patrimonio': 'Patrimonio (USD)',
+                                          'utilidad_an_imp': 'Utilidad Antes de Impuestos (USD)',
                                           'ruc': 'RUC',
                                           'certificada': 'Certificada',
                                           },
                                           axis=1)
 
+
+# Reemplaza los valores númericos por categóricos
+resultado_final['Utilidad Antes de Impuestos (USD)'] = resultado_final['Utilidad Antes de Impuestos (USD)'].replace(0,'No')
+resultado_final['Utilidad Antes de Impuestos (USD)'] = resultado_final['Utilidad Antes de Impuestos (USD)'].replace(1,'Si')
+resultado_final['Certificada'] = resultado_final['Certificada'].replace(1,'Si')
+resultado_final['Certificada'] = resultado_final['Certificada'].replace(0,'No')
+
+
+
 st.write(""" #### Prospectos similares a los principales        
          """)
 st.dataframe(resultado_final) 
 
-# Visualizaciones de Análisis Económico-Financieros
+## Visualizaciones de Análisis Económico-Financieros
 
-# Genera gráficos de barras
-fig = px.bar(resultado_final, x='RUC', y='Ingresos por Ventas',
-             title="Comparación de ingresos por ventas",
+# 1) Genera gráficos de barras para análisis de ingresos por ventas
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Ingresos por Ventas (USD)',
+             title="Comparación de ingresos por ventas entre prospectos",
              width=600, height=400,
              template="simple_white",
-             color="Certificada")
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b>Ingresos por Ventas (USD)</b>')
+
+st.plotly_chart(fig)
 
 
+# 2) Genera gráficos de barras para análisis de patrimonio
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Patrimonio (USD)',
+             title="Comparación de patrimonio entre prospectos",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Patrimonio (USD)</b>')
+
+st.plotly_chart(fig)
+
+# 3) Genera gráficos de barras para análisis de activos
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Activos (USD)',
+             title="Comparación de activos entre prospectos",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Activos (USD) </b>')
+
+st.plotly_chart(fig)
+
+# 4) Genera gráficos de barras para análisis de utilidad del ejercicio
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Utilidad del Ejercicio (USD)',
+             title="Comparación de utilidad del ejercicio",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad del Ejercicio (USD)</b>')
+
+st.plotly_chart(fig)
+
+# 5) Genera gráficos de barras para análisis de utilidad antes de impuestos
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Utilidad Antes de Impuestos (USD)',
+             title="Comparación de utilidad antes de impuestos",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad Antes de Impuestos (USD)</b>')
+
+st.plotly_chart(fig)
+
+# 6) Genera gráficos de barras para análisis de ingresos totales
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Ingresos Totales (USD)',
+             title="Comparación de ingresos totales",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Ingresos Totales (USD)</b>')
+
+st.plotly_chart(fig)
+
+# 7) Genera gráficos de barras para análisis de total de gastos
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Total de Gastos (USD)',
+             title="Comparación de total de gastos",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Total de Gastos (USD)</b>')
+
+st.plotly_chart(fig)
+
+# 7) Genera gráficos de barras para análisis de número de empleados
+
+colors = {'Si': 'blue', 'No': 'gray'}
+
+fig = px.bar(resultado_final, x='RUC', y='Número de Empleados',
+             title="Comparación de número de empleados",
+             width=600, height=400,
+             template="simple_white",
+             color="Certificada",
+             color_discrete_map=colors)
+
+fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Número de Empleados</b>')
 
 st.plotly_chart(fig)
