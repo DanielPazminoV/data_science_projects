@@ -19,39 +19,42 @@ coordenadas_prospectos_principales["latitude"] = coordenadas_prospectos_principa
 coordenadas_prospectos_principales["longitude"] = coordenadas_prospectos_principales["longitude"].astype(float)
 
 ## DESARROLLO DE LA APP
+with st.sidebar.expander("Introducción"):
+    st.write(""" ## BLUE LOAN AI """)
+    st.image('Datos/mangroove_swamp.jpg')
+    st.write(""" Blue Loan AI es una plataforma de inteligencia artificial 
+             que ayuda a las instituciones financieras a evaluar y gestionar 
+             préstamos azules. Su producto mínimo viable (MVP) identifica 
+             empresas prospectas para la colocación de estos préstamos, 
+             priorizando aquellas del sector de acuicultura en Ecuador. 
+             Al dirigir capital hacia estas iniciativas, la plataforma contribuye 
+             a acelerar la transición hacia una economía baja en carbono.""")
+    
+with st.sidebar.expander("Prospectos Principales"):
+    st.write(""" Corresponden a empresas certificadas por la Aquaculture Stewarship Council (ASC) 
+             en Ecuador con un índice de liquidez corriente mayor o igual a 1. 
+             El mapa muestra su ubicación.""")
+    
+with st.sidebar.expander("Análisis Económico-Financiero de los Prospectos"):
+    st.write(""" La aplicación selecciona empresas con características económico-financieras 
+             similares a los prospectos principales. Adicionalmente, realiza un análisis 
+             económico-financiero comparando la empresa prospecto principal seleccionada con 
+             los 10 prospectos más semejantes.""")
 
-st.image('Datos/mangroove_swamp.jpg')
+st.image('Datos/banner.png')
 
-st.write(""" # QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL?: INTRODUCIENDO A BLUE LOAN AI 
+st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL? """)
+#st.markdown()
 
-Descripción: Blue Loan AI es una plataforma de inteligencia artificial 
-         diseñada para ayudar a las instituciones financieras a evaluar y 
-         gestionar préstamos azules. En su versión de producto mínimo viable (MVP), 
-         identifica empresas prospectos para la colocación de estos préstamos.
-
-Impacto del proyecto: BlueLoan AI promueve la asignación de préstamos 
-         azules a empresas del sector de acuicultura en Ecuador. 
-         Al dirigir capital hacia estas iniciativas, la plataforma acelera 
-         la transición hacia una economía baja en carbono.         
-         """)
+st.write(""" ### UBICACIÓN PROSPECTOS PRINCIPALES """)  
 
 
-st.write(""" ## PROSPECTOS PRINCIPALES
-Corresponden a empresas certificadas por la "Aquaculture Stewarship Council" (ASC)
-          en Ecuador con un índice de liquidez corriente mayor o igual a 1.
-         El siguiente mapa muestra su ubicación.
-""")
-
-st.map(coordenadas_prospectos_principales)
-
-st.write(""" ## ANÁLISIS ECONÓMICO-FINANCIERO DE LOS PROSPECTOS
-La aplicación selecciona empresas con características económico-financieras 
-         similares a los prospectos principales. Adicionalmente, realiza
-         un análisis económico-financiero comparando la empresa
-         prospecto principal seleccionada con los 10 prospectos más semejantes.         
-         """)
+st.map(coordenadas_prospectos_principales)       
 
 # Mostrar la lista desplegable en la aplicación Streamlit
+
+st.write(""" ### ANÁLISIS ECONÓMICO-FINANCIERO DE LOS PROSPECTOS """) 
+
 selected_option = st.selectbox('Seleccione el RUC de un prospecto principal', 
                                base_de_prospectos_principales["ruc"])
 
@@ -133,152 +136,148 @@ def dataframe_de_resultados(df, n, function, k, metric):
 
 resultado_final = dataframe_de_resultados(datos_companias_escalado, indice, get_knn, 10, "euclidean")
 
+
 resultado_final = resultado_final.rename({'cia_imvalores': 'Empresas en Mercado de Valores', 
-                                          'ingresos_ventas': 'Ingresos por Ventas (USD)',
-                                          'activos': 'Activos (USD)',
-                                          'n_empleados': 'Número de Empleados',
-                                          'ingresos_totales': 'Ingresos Totales (USD)',
-                                          'utilidad_ejercicio': 'Utilidad del Ejercicio (USD)',
-                                          'total_gastos': 'Total de Gastos (USD)',
-                                          'patrimonio': 'Patrimonio (USD)',
-                                          'utilidad_an_imp': 'Utilidad Antes de Impuestos (USD)',
-                                          'ruc': 'RUC',
-                                          'certificada': 'Certificada',
-                                          },
-                                          axis=1)
+                                            'ingresos_ventas': 'Ingresos por Ventas (USD)',
+                                            'activos': 'Activos (USD)',
+                                            'n_empleados': 'Número de Empleados',
+                                            'ingresos_totales': 'Ingresos Totales (USD)',
+                                            'utilidad_ejercicio': 'Utilidad del Ejercicio (USD)',
+                                            'total_gastos': 'Total de Gastos (USD)',
+                                            'patrimonio': 'Patrimonio (USD)',
+                                            'utilidad_an_imp': 'Utilidad Antes de Impuestos (USD)',
+                                            'ruc': 'RUC',
+                                            'certificada': 'Certificada',
+                                            },
+                                            axis=1)
 
 
 # Reemplaza los valores númericos por categóricos
-resultado_final['Utilidad Antes de Impuestos (USD)'] = resultado_final['Utilidad Antes de Impuestos (USD)'].replace(0,'No')
-resultado_final['Utilidad Antes de Impuestos (USD)'] = resultado_final['Utilidad Antes de Impuestos (USD)'].replace(1,'Si')
+resultado_final['Empresas en Mercado de Valores'] = resultado_final['Empresas en Mercado de Valores'].replace(0,'No')
+resultado_final['Empresas en Mercado de Valores'] = resultado_final['Empresas en Mercado de Valores'].replace(1,'Si')
 resultado_final['Certificada'] = resultado_final['Certificada'].replace(1,'Si')
 resultado_final['Certificada'] = resultado_final['Certificada'].replace(0,'No')
 
 
-
-st.write(""" #### Prospectos similares a los principales        
-         """)
-st.dataframe(resultado_final) 
-
 ## Visualizaciones de Análisis Económico-Financieros
 
-# 1) Genera gráficos de barras para análisis de ingresos por ventas
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["Ingresos por Ventas",
+                                                    "Patrimonio",
+                                                    "Activos",
+                                                    "Utilidad del Ejercicio",
+                                                    "Utilidad Antes de Impuestos",
+                                                    "Ingresos Totales",
+                                                    "Datos Prospectos Similares"
+                                                    ])
 
-colors = {'Si': 'blue', 'No': 'gray'}
+with tab1:
 
-fig = px.bar(resultado_final, x='RUC', y='Ingresos por Ventas (USD)',
-             title="Comparación de ingresos por ventas entre prospectos",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
+    # 1) Genera gráficos de barras para análisis de ingresos por ventas
 
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b>Ingresos por Ventas (USD)</b>')
+    colors = {'Si': 'blue', 'No': 'gray'}
 
-st.plotly_chart(fig)
+    fig = px.bar(resultado_final, x='RUC', y='Ingresos por Ventas (USD)',
+                title="Comparación de ingresos por ventas entre prospectos",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b>Ingresos por Ventas (USD)</b>')
+
+    st.plotly_chart(fig)
+
+with tab2:
+
+    # 2) Genera gráficos de barras para análisis de patrimonio
+
+    colors = {'Si': 'blue', 'No': 'gray'}
+
+    fig = px.bar(resultado_final, x='RUC', y='Patrimonio (USD)',
+                title="Comparación de patrimonio entre prospectos",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Patrimonio (USD)</b>')
+
+    st.plotly_chart(fig)
+
+with tab3:
+
+    # 3) Genera gráficos de barras para análisis de activos
+
+    colors = {'Si': 'blue', 'No': 'gray'}
+
+    fig = px.bar(resultado_final, x='RUC', y='Activos (USD)',
+                title="Comparación de activos entre prospectos",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Activos (USD) </b>')
+
+    st.plotly_chart(fig)
+
+with tab4:
+
+    # 4) Genera gráficos de barras para análisis de utilidad del ejercicio
+
+    colors = {'Si': 'blue', 'No': 'gray'}
+
+    fig = px.bar(resultado_final, x='RUC', y='Utilidad del Ejercicio (USD)',
+                title="Comparación de utilidad del ejercicio",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad del Ejercicio (USD)</b>')
+
+    st.plotly_chart(fig)
+
+with tab5:
+
+    # 5) Genera gráficos de barras para análisis de utilidad antes de impuestos
+
+    colors = {'Si': 'blue', 'No': 'gray'}
+
+    fig = px.bar(resultado_final, x='RUC', y='Utilidad Antes de Impuestos (USD)',
+                title="Comparación de utilidad antes de impuestos",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad Antes de Impuestos (USD)</b>')
+
+    st.plotly_chart(fig)
+
+with tab6:
+
+    # 6) Genera gráficos de barras para análisis de ingresos totales
+
+    colors = {'Si': 'blue', 'No': 'gray'}
+
+    fig = px.bar(resultado_final, x='RUC', y='Ingresos Totales (USD)',
+                title="Comparación de ingresos totales",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Ingresos Totales (USD)</b>')
+
+    st.plotly_chart(fig)
+
+with tab7:
+
+    st.write(""" #### Prospectos similares a los principales        
+         """)
+    st.dataframe(resultado_final) 
 
 
-# 2) Genera gráficos de barras para análisis de patrimonio
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Patrimonio (USD)',
-             title="Comparación de patrimonio entre prospectos",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Patrimonio (USD)</b>')
-
-st.plotly_chart(fig)
-
-# 3) Genera gráficos de barras para análisis de activos
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Activos (USD)',
-             title="Comparación de activos entre prospectos",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Activos (USD) </b>')
-
-st.plotly_chart(fig)
-
-# 4) Genera gráficos de barras para análisis de utilidad del ejercicio
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Utilidad del Ejercicio (USD)',
-             title="Comparación de utilidad del ejercicio",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad del Ejercicio (USD)</b>')
-
-st.plotly_chart(fig)
-
-# 5) Genera gráficos de barras para análisis de utilidad antes de impuestos
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Utilidad Antes de Impuestos (USD)',
-             title="Comparación de utilidad antes de impuestos",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad Antes de Impuestos (USD)</b>')
-
-st.plotly_chart(fig)
-
-# 6) Genera gráficos de barras para análisis de ingresos totales
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Ingresos Totales (USD)',
-             title="Comparación de ingresos totales",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Ingresos Totales (USD)</b>')
-
-st.plotly_chart(fig)
-
-# 7) Genera gráficos de barras para análisis de total de gastos
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Total de Gastos (USD)',
-             title="Comparación de total de gastos",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Total de Gastos (USD)</b>')
-
-st.plotly_chart(fig)
-
-# 7) Genera gráficos de barras para análisis de número de empleados
-
-colors = {'Si': 'blue', 'No': 'gray'}
-
-fig = px.bar(resultado_final, x='RUC', y='Número de Empleados',
-             title="Comparación de número de empleados",
-             width=600, height=400,
-             template="simple_white",
-             color="Certificada",
-             color_discrete_map=colors)
-
-fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Número de Empleados</b>')
-
-st.plotly_chart(fig)
+# Añade pie de nota
+st.markdown('<sub>Creado por Daniel Pazmiño Vernaza | Contacto: daniel.pazmino-v@gmail.com</sub>', unsafe_allow_html=True)
