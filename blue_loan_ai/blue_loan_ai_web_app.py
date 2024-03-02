@@ -4,6 +4,8 @@ import sklearn.neighbors
 import sklearn.preprocessing
 from sklearn.neighbors import NearestNeighbors
 import plotly.express as px
+import folium
+from streamlit_folium import st_folium
 
 import streamlit as st
 
@@ -49,13 +51,39 @@ st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL? """)
 st.write(""" ### UBICACIÓN PROSPECTOS PRINCIPALES """)  
 
 
-st.map(coordenadas_prospectos_principales)       
+#st.map(coordenadas_prospectos_principales)       
+
+# Calcual el centro
+centro_latitud = coordenadas_prospectos_principales['latitude'].mean() 
+centro_longitud = coordenadas_prospectos_principales['longitude'].mean() 
+
+# Crea el objeto
+# attr = (
+#     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+#     'contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
+# )
+# tiles = "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
+#m = folium.Map(location=[centro_latitud, centro_longitud], tiles=tiles, attr=attr, zoom_start=10)
+m = folium.Map(location=[centro_latitud, centro_longitud], zoom_start=9)
+
+# Añadir marcadores al mapa
+for idx, row in coordenadas_prospectos_principales.iterrows():
+    folium.CircleMarker([row['latitude'], row['longitude']], 
+                        popup=row['RUC'], radius=3,
+                        weight=0,
+                        fill_color='red',
+                        fill_opacity=1).add_to(m)
+
+# call to render Folium map in Streamlit
+st_data = st_folium(m, width=725)
+
+
 
 # Mostrar la lista desplegable en la aplicación Streamlit
 
 st.write(""" ### ANÁLISIS ECONÓMICO-FINANCIERO DE LOS PROSPECTOS """) 
 
-selected_option = st.selectbox('Seleccione el RUC de un prospecto principal', 
+selected_option = st.selectbox('El análisis compara a un prospecto principal con nueve prospectos adicionales (secundarios). Seleccione el RUC de un prospecto principal de la lista desplegable para iniciar.', 
                                base_de_prospectos_principales["ruc"])
 
 # A partir del RUC seleccionado, extrae el índice respectivo
@@ -276,7 +304,17 @@ with tab7:
 
     st.write(""" #### Prospectos similares a los principales        
          """)
-    st.dataframe(resultado_final) 
+    
+    # Función para resaltar la fila que tiene el número de RUC seleccionado
+    def color_coding(row):
+     return ['background-color:yellow'] * len(row) if row.RUC == selected_option else ['background-color:white'] * len(row)
+
+    # Aplicar el estilo personalizado al dataframe
+    st.dataframe(resultado_final.style.apply(color_coding, axis=1))
+    
+    #st.dataframe(resultado_final) 
+
+
 
 
 # Añade pie de nota
