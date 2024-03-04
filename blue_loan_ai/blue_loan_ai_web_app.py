@@ -41,49 +41,27 @@ with st.sidebar.expander("Análisis Económico-Financiero de los Prospectos"):
     st.write(""" La aplicación selecciona empresas con características económico-financieras 
              similares a los prospectos principales. Adicionalmente, realiza un análisis 
              económico-financiero comparando la empresa prospecto principal seleccionada con 
-             los 10 prospectos más semejantes.""")
+             los 9 prospectos más semejantes.""")
+
+with st.sidebar.expander("Fuentes de datos"):
+    st.write("""
+                
+1) https://www.supercias.gob.ec/portalscvs/index.htm
+         
+2) https://asc-aqua.org/
+""")
 
 st.image('Datos/banner.png')
 
 st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL? """)
 #st.markdown()
 
-st.write(""" ### UBICACIÓN PROSPECTOS PRINCIPALES """)  
-
-
-#st.map(coordenadas_prospectos_principales)       
-
-# Calcual el centro
-centro_latitud = coordenadas_prospectos_principales['latitude'].mean() 
-centro_longitud = coordenadas_prospectos_principales['longitude'].mean() 
-
-# Crea el objeto
-# attr = (
-#     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
-#     'contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
-# )
-# tiles = "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
-#m = folium.Map(location=[centro_latitud, centro_longitud], tiles=tiles, attr=attr, zoom_start=10)
-m = folium.Map(location=[centro_latitud, centro_longitud], zoom_start=9)
-
-# Añadir marcadores al mapa
-for idx, row in coordenadas_prospectos_principales.iterrows():
-    folium.CircleMarker([row['latitude'], row['longitude']], 
-                        popup=row['RUC'], radius=3,
-                        weight=0,
-                        fill_color='red',
-                        fill_opacity=1).add_to(m)
-
-# call to render Folium map in Streamlit
-st_data = st_folium(m, width=725)
-
-
 
 # Mostrar la lista desplegable en la aplicación Streamlit
 
 st.write(""" ### ANÁLISIS ECONÓMICO-FINANCIERO DE LOS PROSPECTOS """) 
 
-selected_option = st.selectbox('El análisis compara a un prospecto principal con nueve prospectos adicionales (secundarios). Seleccione el RUC de un prospecto principal de la lista desplegable para iniciar.', 
+selected_option = st.selectbox('En la siguiente lista desplegable seleccione el RUC de un prospecto principal para iniciar.', 
                                base_de_prospectos_principales["ruc"])
 
 # A partir del RUC seleccionado, extrae el índice respectivo
@@ -91,11 +69,8 @@ indice = int(datos_companias.loc[datos_companias['ruc'] == int(selected_option)]
 
 # Escalado de datos
 
-feature_names = ['cia_imvalores', 'ingresos_ventas', 'activos', 
-                          'patrimonio', 'utilidad_an_imp',
-                          'impuesto_renta', 'n_empleados',
-                          'ingresos_totales', 'utilidad_ejercicio',
-                          'total_gastos']
+feature_names = ['ingresos_ventas', 'activos', 
+                          'utilidad_neta', 'liquidez_corriente']
 
 transformer_mas = sklearn.preprocessing.MaxAbsScaler().fit(datos_companias[feature_names].to_numpy())
 
@@ -165,15 +140,11 @@ def dataframe_de_resultados(df, n, function, k, metric):
 resultado_final = dataframe_de_resultados(datos_companias_escalado, indice, get_knn, 10, "euclidean")
 
 
-resultado_final = resultado_final.rename({'cia_imvalores': 'Empresas en Mercado de Valores', 
+resultado_final = resultado_final.rename({
                                             'ingresos_ventas': 'Ingresos por Ventas (USD)',
-                                            'activos': 'Activos (USD)',
-                                            'n_empleados': 'Número de Empleados',
-                                            'ingresos_totales': 'Ingresos Totales (USD)',
-                                            'utilidad_ejercicio': 'Utilidad del Ejercicio (USD)',
-                                            'total_gastos': 'Total de Gastos (USD)',
-                                            'patrimonio': 'Patrimonio (USD)',
-                                            'utilidad_an_imp': 'Utilidad Antes de Impuestos (USD)',
+                                            'activos': 'Activos (USD)',                                           
+                                            'utilidad_neta': 'Utilidad Neta (USD)',
+                                            'liquidez_corriente': 'Índice de Liquidez Corriente',                                        
                                             'ruc': 'RUC',
                                             'certificada': 'Certificada',
                                             },
@@ -181,20 +152,16 @@ resultado_final = resultado_final.rename({'cia_imvalores': 'Empresas en Mercado 
 
 
 # Reemplaza los valores númericos por categóricos
-resultado_final['Empresas en Mercado de Valores'] = resultado_final['Empresas en Mercado de Valores'].replace(0,'No')
-resultado_final['Empresas en Mercado de Valores'] = resultado_final['Empresas en Mercado de Valores'].replace(1,'Si')
 resultado_final['Certificada'] = resultado_final['Certificada'].replace(1,'Si')
 resultado_final['Certificada'] = resultado_final['Certificada'].replace(0,'No')
 
 
 ## Visualizaciones de Análisis Económico-Financieros
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["Ingresos por Ventas",
-                                                    "Patrimonio",
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Ingresos por Ventas",
                                                     "Activos",
-                                                    "Utilidad del Ejercicio",
-                                                    "Utilidad Antes de Impuestos",
-                                                    "Ingresos Totales",
+                                                    "Utilidad Neta",
+                                                    "Liquidez Corriente",
                                                     "Datos Prospectos Similares"
                                                     ])
 
@@ -217,24 +184,7 @@ with tab1:
 
 with tab2:
 
-    # 2) Genera gráficos de barras para análisis de patrimonio
-
-    colors = {'Si': 'blue', 'No': 'gray'}
-
-    fig = px.bar(resultado_final, x='RUC', y='Patrimonio (USD)',
-                title="Comparación de patrimonio entre prospectos",
-                width=600, height=400,
-                template="simple_white",
-                color="Certificada",
-                color_discrete_map=colors)
-
-    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Patrimonio (USD)</b>')
-
-    st.plotly_chart(fig)
-
-with tab3:
-
-    # 3) Genera gráficos de barras para análisis de activos
+    # 2) Genera gráficos de barras para análisis de activos
 
     colors = {'Si': 'blue', 'No': 'gray'}
 
@@ -249,58 +199,41 @@ with tab3:
 
     st.plotly_chart(fig)
 
-with tab4:
+with tab3:
 
-    # 4) Genera gráficos de barras para análisis de utilidad del ejercicio
+    # 3) Genera gráficos de barras para análisis de utilidad neta
 
     colors = {'Si': 'blue', 'No': 'gray'}
 
-    fig = px.bar(resultado_final, x='RUC', y='Utilidad del Ejercicio (USD)',
-                title="Comparación de utilidad del ejercicio",
+    fig = px.bar(resultado_final, x='RUC', y='Utilidad Neta (USD)',
+                title="Comparación de utilidad neta",
                 width=600, height=400,
                 template="simple_white",
                 color="Certificada",
                 color_discrete_map=colors)
 
-    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad del Ejercicio (USD)</b>')
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad Neta (USD)</b>')
+
+    st.plotly_chart(fig)
+
+with tab4:
+
+    # 4) Genera gráficos de barras para análisis de liquidez corriente
+
+    colors = {'Si': 'blue', 'No': 'gray'}
+
+    fig = px.bar(resultado_final, x='RUC', y='Índice de Liquidez Corriente',
+                title="Comparación de liquidez corriente",
+                width=600, height=400,
+                template="simple_white",
+                color="Certificada",
+                color_discrete_map=colors)
+
+    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Índice de Liquidez Corriente</b>')
 
     st.plotly_chart(fig)
 
 with tab5:
-
-    # 5) Genera gráficos de barras para análisis de utilidad antes de impuestos
-
-    colors = {'Si': 'blue', 'No': 'gray'}
-
-    fig = px.bar(resultado_final, x='RUC', y='Utilidad Antes de Impuestos (USD)',
-                title="Comparación de utilidad antes de impuestos",
-                width=600, height=400,
-                template="simple_white",
-                color="Certificada",
-                color_discrete_map=colors)
-
-    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Utilidad Antes de Impuestos (USD)</b>')
-
-    st.plotly_chart(fig)
-
-with tab6:
-
-    # 6) Genera gráficos de barras para análisis de ingresos totales
-
-    colors = {'Si': 'blue', 'No': 'gray'}
-
-    fig = px.bar(resultado_final, x='RUC', y='Ingresos Totales (USD)',
-                title="Comparación de ingresos totales",
-                width=600, height=400,
-                template="simple_white",
-                color="Certificada",
-                color_discrete_map=colors)
-
-    fig.update_layout(xaxis_title='<b>RUC</b>', yaxis_title='<b> Ingresos Totales (USD)</b>')
-
-    st.plotly_chart(fig)
-
-with tab7:
 
     st.write(""" #### Prospectos similares a los principales        
          """)
@@ -312,10 +245,35 @@ with tab7:
     # Aplicar el estilo personalizado al dataframe
     st.dataframe(resultado_final.style.apply(color_coding, axis=1))
     
-    #st.dataframe(resultado_final) 
+st.write(""" ### UBICACIÓN PROSPECTOS PRINCIPALES """)  
+
+
+#st.map(coordenadas_prospectos_principales)       
+
+# Calcual el centro
+centro_latitud = coordenadas_prospectos_principales['latitude'].mean() 
+centro_longitud = coordenadas_prospectos_principales['longitude'].mean() 
+
+# Crea el objeto
+# attr = (
+#     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+#     'contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
+# )
+# tiles = "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
+#m = folium.Map(location=[centro_latitud, centro_longitud], tiles=tiles, attr=attr, zoom_start=10)
+m = folium.Map(location=[centro_latitud, centro_longitud], zoom_start=9)
+
+# Añadir marcadores al mapa
+for idx, row in coordenadas_prospectos_principales.iterrows():
+    folium.CircleMarker([row['latitude'], row['longitude']], 
+                        popup=row['RUC'], radius=3,
+                        weight=0,
+                        fill_color='red',
+                        fill_opacity=1).add_to(m)
+
+# call to render Folium map in Streamlit
+st_data = st_folium(m, width=725)
 
 
 
-
-# Añade pie de nota
 st.markdown('<sub>Creado por Daniel Pazmiño Vernaza | Contacto: daniel.pazmino-v@gmail.com</sub>', unsafe_allow_html=True)

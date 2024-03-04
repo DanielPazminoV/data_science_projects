@@ -24,10 +24,10 @@ datos_companias_join_1 = pd.merge(compania,companias_certificadas_asc, on = "ruc
 
 # Filtra los datos de la SuperCias para acuicultura
 ranking["ciiu_n6"] = ranking['ciiu_n6'].fillna('')
-ranking_ciiu_A032 = ranking[ranking['ciiu_n6'].str.contains('A032')]
+ranking_ciiu_A0321_02 = ranking[ranking['ciiu_n6'].str.contains('A0321.02')]
 
  # Join no. 2
-datos_companias = pd.merge(datos_companias_join_1, ranking_ciiu_A032, on = "expediente", how='outer')
+datos_companias = pd.merge(datos_companias_join_1, ranking_ciiu_A0321_02, on = "expediente", how='outer')
 datos_companias = datos_companias.drop_duplicates(subset=['ruc'])
 
 # Elimina columnas que no son necesarias para la modelación
@@ -44,8 +44,12 @@ datos_companias = datos_companias.drop(["anio",
                                             "nombre_compania"
                                            ], axis=1)
 
-# Filtra las empresas con índice de liquidez corriente mayor o igual a 1.
-datos_companias = datos_companias[datos_companias['liquidez_corriente'] >= 1]
+# Filtrar las filas según las condiciones establecidas
+datos_companias = datos_companias[
+                  (datos_companias['ingresos_ventas'] > 0) &
+                  (datos_companias['n_empleados'] > 0) &
+                  (datos_companias['activos'] > 0) &
+                  (datos_companias['patrimonio'] > 0)]
 
 # Filtra la base de prospectos principales
 base_prospectos_principales = datos_companias[datos_companias['certificada'] == 1]
@@ -57,63 +61,21 @@ base_prospectos_principales.to_csv('base_prospectos_principales_copy.csv', index
 
 # Rellena de datos 
 datos_companias['certificada'] = datos_companias['certificada'].fillna(0)
-datos_companias[['apalancamiento', 
-                 'apalancamiento_financiero',
-                 'apalancamiento_c_l_plazo',
-                 'margen_operacional',
-                 'gastos_financieros',
-                 'end_patrimonial_nct',
-                 'gastos_admin_ventas',
-                 'depreciaciones',
-                 'amortizaciones',
-                 'costos_ventas_prod',
-                 'deuda_total_c_plazo',
-                 'deuda_total',
-                 'total_gastos'       
-                ]] = datos_companias[['apalancamiento', 
-                 'apalancamiento_financiero',
-                 'apalancamiento_c_l_plazo',
-                 'margen_operacional',
-                 'gastos_financieros',
-                 'gastos_admin_ventas',
-                 'depreciaciones',
-                 'amortizaciones',
-                 'costos_ventas_prod',
-                 'end_patrimonial_nct',
-                 'deuda_total_c_plazo',
-                 'deuda_total',
-                 'total_gastos']].fillna(
-                datos_companias[['apalancamiento', 
-                 'apalancamiento_financiero',
-                 'apalancamiento_c_l_plazo',
-                 'margen_operacional',
-                 'gastos_financieros',
-                 'gastos_admin_ventas',
-                 'depreciaciones',
-                 'end_patrimonial_nct',
-                 'amortizaciones',
-                 'costos_ventas_prod',
-                 'deuda_total_c_plazo',
-                 'deuda_total',
-                 'total_gastos']].median())
+
+datos_companias[['utilidad_neta', 'liquidez_corriente']] = datos_companias[['utilidad_neta', 'liquidez_corriente']].fillna(
+                datos_companias[['utilidad_neta', 'liquidez_corriente']].median())
 
 # Selección de variables
-datos_companias = datos_companias[['cia_imvalores', 'ingresos_ventas', 'activos', 
-                          'patrimonio', 'utilidad_an_imp',
-                          'impuesto_renta', 'n_empleados',
-                          'ingresos_totales', 'utilidad_ejercicio',
-                          'total_gastos', 'ruc', 'certificada']]
+datos_companias = datos_companias[['ingresos_ventas', 'activos', 
+                          'utilidad_neta', 'liquidez_corriente', 'ruc', 'certificada']]
 datos_companias = datos_companias.reset_index(drop=True)
 
 # Guarda los datos de las companias seleccionadas para el análisis
 datos_companias.to_csv('datos_companias_copy.csv', index=False)  
 
 # Escalado de datos
-feature_names = ['cia_imvalores', 'ingresos_ventas', 'activos', 
-                          'patrimonio', 'utilidad_an_imp',
-                          'impuesto_renta', 'n_empleados',
-                          'ingresos_totales', 'utilidad_ejercicio',
-                          'total_gastos']
+feature_names = ['ingresos_ventas', 'activos', 
+                          'utilidad_neta', 'liquidez_corriente']
 transformer_mas = sklearn.preprocessing.MaxAbsScaler().fit(datos_companias[feature_names].to_numpy())
 datos_companias_escalado = datos_companias.copy()
 datos_companias_escalado.loc[:, feature_names] = transformer_mas.transform(datos_companias[feature_names].to_numpy())
