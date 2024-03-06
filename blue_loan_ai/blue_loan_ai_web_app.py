@@ -251,8 +251,8 @@ st.write(""" ### UBICACIÓN PROSPECTOS PRINCIPALES """)
 #st.map(coordenadas_prospectos_principales)       
 
 # Calcual el centro
-centro_latitud = coordenadas_prospectos_principales['latitude'].mean() 
-centro_longitud = coordenadas_prospectos_principales['longitude'].mean() 
+# centro_latitud = coordenadas_prospectos_principales['latitude'].mean() 
+# centro_longitud = coordenadas_prospectos_principales['longitude'].mean() 
 
 # Crea el objeto
 # attr = (
@@ -261,7 +261,7 @@ centro_longitud = coordenadas_prospectos_principales['longitude'].mean()
 # )
 # tiles = "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"
 #m = folium.Map(location=[centro_latitud, centro_longitud], tiles=tiles, attr=attr, zoom_start=10)
-m = folium.Map(location=[centro_latitud, centro_longitud], zoom_start=9)
+m = folium.Map(location=[-1.20726, -80.37132], zoom_start=7)
 
 # Añadir marcadores al mapa
 for idx, row in coordenadas_prospectos_principales.iterrows():
