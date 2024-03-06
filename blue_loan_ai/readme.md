@@ -1,9 +1,9 @@
-🌊 # Blue Loan AI 💲
+# Blue Loan AI 🌊💲
 
 Blue Loan AI es una plataforma de inteligencia artificial diseñada para ayudar a las instituciones financieras a evaluar y gestionar préstamos azules. 
 En su versión de producto mínimo viable (MVP), identifica empresas prospectos para la colocación de estos préstamos.
 
-## Skillset
+## Skillset ⚒️
 
 Python 3 (Anaconda installation). Libraries: pandas, matplotlib, sklearn, plotly, folium, streamlit.
 
