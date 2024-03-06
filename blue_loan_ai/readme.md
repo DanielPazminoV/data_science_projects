@@ -49,8 +49,4 @@ hacer una comparación. En ese sentido, los resultados resultarían ser una apro
 
 **Falta de datos etiquetados**: En virtud de que no se cuenta con información de que empresas ya han recibido préstamos azules, 
 no se puede realizar una modelación predictiva supervisada con la mayoría de algoritmos de machine learning. 
-En ese sentido se optará por aplicar “K nearest neiborhs” para buscar empresas similares con los pocos datos etiquetados con los que se cuentan. 
-Además, se aplicará la misma metodología con otros “proxys” (empresas que han recibido préstamos verdes y 
-empresas que cuenten con buenos índices de sostenibilidad). No obstante, los resutlados podrían ser imprecisos. 
-Por ejemplo, se podrían identificar empresas que ya hayan recibido préstamos verdes pero que no lo sepamos por falta de cruce de 
-información entre instituciones financieras.
+En ese sentido se optará por aplicar “K nearest neiborhs” para buscar empresas similares con los pocos datos etiquetados con los que se cuentan.
