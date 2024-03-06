@@ -1,17 +1,30 @@
 # Blue Loan AI
 
 Blue Loan AI es una plataforma de inteligencia artificial diseñada para ayudar a las instituciones financieras a evaluar y gestionar préstamos azules. 
-En su versión MVP, identifica empresas prospectos para la colocación de estos préstamos.
+En su versión de producto mínimo viables (MVP), identifica empresas prospectos para la colocación de estos préstamos.
 
 ## Skillset
 
+Python 3 (Anaconda installation). Libraries: pandas, sklearn, plotly, folium, streamlit.
+
 ## Enlaces
 
+En cuanto a los datos de las empresas del ASC, los mismos se obtuvieron de su página web: https://asc-aqua.org/
+
 ## Objetivo
+
+Identificar prospectos de empresas del sector de acuicultura del Ecuador con potencial de recibir préstamos azules.
 
 ## Alcance
 
 ## Fuentes de datos
+
+Para este MVP se utilizaron dos bases de datos:
+
+1.- Registros de la Superintendencia de Compañías de Ecuador.
+2.- Empresas de Ecuador que han obtenido una certificación con el "Aquaculture Stewarship Council" (ASC).
+
+Los datos de la Superintendencia de Compañias de Ecuador fueron descargados de la página: https://appscvsmovil.supercias.gob.ec/ranking/reporte.html. Los datos corresponden a los registros del año 2023.
 
 ## Contexto
 
