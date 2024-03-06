@@ -13,6 +13,10 @@ Python 3 (Anaconda installation). Libraries: pandas, matplotlib, sklearn, plotly
   ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
   ![Matplotlib](https://img.shields.io/badge/-Matplotlib-333333?style=flat&logo=matplotlib)
   ![Scikitlearn](https://img.shields.io/badge/-Scikitlearn-333333?style=flat&logo=scikitlearn)
+  ![Plotly](https://img.shields.io/badge/-Plotly-333333?style=flat&logo=plotly)
+  ![Folium](https://img.shields.io/badge/-Folium-333333?style=flat&logo=folium)
+  ![Streamlit](https://img.shields.io/badge/-Streamlit-333333?style=flat&logo=streamlit)
+
 - 📊 &nbsp;
   ![Git](https://img.shields.io/badge/-Git-333333?style=flat&logo=git)
   ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github)
