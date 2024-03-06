@@ -41,6 +41,14 @@ En cuanto a los datos de las empresas del ASC, los mismos se obtuvieron de su p�
 
 ## Contexto 📚
 
+El término "finanzas azules" se refiere a un enfoque de inversión y gestión financiera que prioriza la sostenibilidad ambiental y la responsabilidad social. Este concepto surge en respuesta a la creciente conciencia sobre el impacto negativo que las actividades económicas pueden tener en el medio ambiente y en las comunidades locales.
+
+El color "azul" se asocia comúnmente con el agua y el medio ambiente, por lo que el término "finanzas azules" enfatiza la importancia de proteger los recursos naturales, especialmente los relacionados con el agua, como mares, océanos, ríos y lagos.
+
+Las finanzas azules abordan tanto la mitigación como la adaptación al cambio climático, financiando proyectos y empresas que promueven la conservación de los recursos hídricos, la gestión sostenible de los océanos, la reducción de la contaminación del agua y la promoción de tecnologías limpias.
+
+Este enfoque también considera la importancia de las comunidades locales y los derechos de las poblaciones que dependen de los recursos marinos y acuáticos para su sustento. Por lo tanto, las finanzas azules pueden incluir inversiones en proyectos que fomenten la equidad social, la creación de empleo local y el empoderamiento de las comunidades costeras.
+
 ## Impacto del Projecto 💥
 
 BlueLoan AI promueve la asignación de préstamos azules a empresas del sector de acuicultura en Ecuador. 
