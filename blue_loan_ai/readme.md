@@ -18,6 +18,9 @@ Python 3 (Anaconda installation). Libraries: pandas, matplotlib, sklearn, plotly
   ![Streamlit](https://img.shields.io/badge/-Streamlit-333333?style=flat&logo=streamlit)
 
 - 📊 &nbsp;
+![Tableau](https://img.shields.io/badge/-Tableau-333333?style=flat&logo=tableau)
+
+- ⚙️ &nbsp;
   ![Git](https://img.shields.io/badge/-Git-333333?style=flat&logo=git)
   ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github)
   ![Jupyter](https://img.shields.io/badge/-Jupyter-333333?style=flat&logo=jupyter)
