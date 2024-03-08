@@ -162,7 +162,7 @@ def dataframe_de_resultados(df1, df2, func, param1, param2):
     return df_final
 
 # Llamado a la función que devuelve la base de prospectos ampliada
-resultados = dataframe_de_resultados(datos_companias_certificadas, datos_companias_escalado, get_knn, 10, "euclidean")
+resultados = dataframe_de_resultados(datos_companias_certificadas, datos_companias_escalado, get_knn, 5, "euclidean")
 resultados.to_csv('base_de_prospectos_ampliada_copy.csv', index=False) 
 
 

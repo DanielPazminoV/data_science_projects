@@ -13,7 +13,8 @@ import streamlit as st
 base_de_prospectos_principales = pd.read_csv("base_prospectos_principales.csv")
 coordenadas_prospectos_principales = pd.read_csv("Datos/coordenadas_empresas_certificadas.csv")
 datos_companias = pd.read_csv("datos_companias.csv") 
-datos_companias_certificadas = datos_companias[datos_companias["certificada"] == 1] 
+datos_companias_certificadas = datos_companias[datos_companias["certificada"] == 1]
+compania = pd.read_csv("Datos/bi_compania.csv") 
 
 # Convierte los tipos de datos
 base_de_prospectos_principales["ruc"] = base_de_prospectos_principales['ruc'].astype(str)
@@ -61,11 +62,14 @@ st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL? """)
 
 st.write(""" ### ANÁLISIS ECONÓMICO-FINANCIERO DE LOS PROSPECTOS """) 
 
-selected_option = st.selectbox('En la siguiente lista desplegable seleccione el RUC de un prospecto principal para iniciar.', 
-                               base_de_prospectos_principales["ruc"])
+selected_option = st.selectbox('En la siguiente lista desplegable seleccione el prospecto principal para iniciar.', 
+                               base_de_prospectos_principales["nombre"])
 
 # A partir del RUC seleccionado, extrae el índice respectivo
-indice = int(datos_companias.loc[datos_companias['ruc'] == int(selected_option)].index[0])
+indice = int(datos_companias.loc[datos_companias['nombre'] == str(selected_option)].index[0])
+
+# Elimina el nombre de empresa en el archivo datos_companias.csv
+datos_companias = datos_companias.drop(['nombre'], axis=1)
 
 # Escalado de datos
 
@@ -137,8 +141,17 @@ def dataframe_de_resultados(df, n, function, k, metric):
 
     return resultado_no_escalado 
 
-resultado_final = dataframe_de_resultados(datos_companias_escalado, indice, get_knn, 10, "euclidean")
+resultado_final = dataframe_de_resultados(datos_companias_escalado, indice, get_knn, 5, "euclidean")
 
+
+# Realiza un "merge" para obtener los nombres de las empresas
+
+compania['ruc'] = compania['ruc'].str.lstrip('0')
+resultado_final = pd.merge(resultado_final, compania, on='ruc', how='left')
+resultado_final = resultado_final.drop(["expediente", "pro_codigo", "Unnamed: 6", "tipo", "provincia"], axis=1)
+
+
+# Configura los nombres de las columnas
 
 resultado_final = resultado_final.rename({
                                             'ingresos_ventas': 'Ingresos por Ventas (USD)',
@@ -147,6 +160,7 @@ resultado_final = resultado_final.rename({
                                             'liquidez_corriente': 'Índice de Liquidez Corriente',                                        
                                             'ruc': 'RUC',
                                             'certificada': 'Certificada',
+                                            'nombre': 'Nombre'
                                             },
                                             axis=1)
 
@@ -154,7 +168,6 @@ resultado_final = resultado_final.rename({
 # Reemplaza los valores númericos por categóricos
 resultado_final['Certificada'] = resultado_final['Certificada'].replace(1,'Si')
 resultado_final['Certificada'] = resultado_final['Certificada'].replace(0,'No')
-
 
 ## Visualizaciones de Análisis Económico-Financieros
 
@@ -240,7 +253,7 @@ with tab5:
     
     # Función para resaltar la fila que tiene el número de RUC seleccionado
     def color_coding(row):
-     return ['background-color:yellow'] * len(row) if row.RUC == selected_option else ['background-color:white'] * len(row)
+        return ['background-color:yellow'] * len(row) if row.Nombre == selected_option else ['background-color:white'] * len(row)
 
     # Aplicar el estilo personalizado al dataframe
     st.dataframe(resultado_final.style.apply(color_coding, axis=1))
