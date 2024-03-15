@@ -81,7 +81,7 @@ with st.sidebar.expander("Fuentes de datos"):
 
 st.image('Datos/banner.png')
 
-st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL?""") 
+#st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL?""") 
 
 # Mostrar la lista desplegable en la aplicación Streamlit
 
