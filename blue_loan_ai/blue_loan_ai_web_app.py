@@ -35,14 +35,14 @@ with st.sidebar.expander("Introducción"):
     
 with st.sidebar.expander("Prospectos Principales"):
     st.write(""" Corresponden a empresas certificadas por la Aquaculture Stewarship Council (ASC) 
-             en Ecuador con un índice de liquidez corriente mayor o igual a 1. 
+             en Ecuador que se encuentran económicamente activas. 
              El mapa muestra su ubicación.""")
     
 with st.sidebar.expander("Análisis Económico-Financiero de los Prospectos"):
     st.write(""" La aplicación selecciona empresas con características económico-financieras 
-             similares a los prospectos principales. Adicionalmente, realiza un análisis 
+             similares a los prospectos principales usando datos del 2023. Adicionalmente, realiza un análisis 
              económico-financiero comparando la empresa prospecto principal seleccionada con 
-             los 9 prospectos más semejantes.""")
+             los 4 prospectos más semejantes.""")
 
 with st.sidebar.expander("Fuentes de datos"):
     st.write("""
@@ -289,4 +289,4 @@ st_data = st_folium(m, width=725)
 
 
 
-st.markdown('<sub>Creado por Daniel Pazmiño Vernaza | Contacto: daniel.pazmino-v@gmail.com</sub>', unsafe_allow_html=True)
+st.markdown('<sub>Creado por Daniel Pazmiño Vernaza | Contacto: daniel.pazmino.v@gmail.com</sub>', unsafe_allow_html=True)
