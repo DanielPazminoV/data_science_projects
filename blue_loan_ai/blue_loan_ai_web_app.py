@@ -10,9 +10,9 @@ from streamlit_folium import st_folium
 import streamlit as st
 
 # Carga los datos del proyecto
-base_de_prospectos_principales = pd.read_csv("base_prospectos_principales.csv")
+base_de_prospectos_principales = pd.read_csv("Datos/base_prospectos_principales.csv")
 coordenadas_prospectos_principales = pd.read_csv("Datos/coordenadas_empresas_certificadas.csv")
-datos_companias = pd.read_csv("datos_companias.csv") 
+datos_companias = pd.read_csv("Datos/datos_companias.csv") 
 datos_companias_certificadas = datos_companias[datos_companias["certificada"] == 1]
 compania = pd.read_csv("Datos/bi_compania.csv") 
 
@@ -24,39 +24,64 @@ coordenadas_prospectos_principales["longitude"] = coordenadas_prospectos_princip
 ## DESARROLLO DE LA APP
 with st.sidebar.expander("Introducción"):
     st.write(""" ## BLUE LOAN AI """)
-    st.image('Datos/mangroove_swamp.jpg')
-    st.write(""" Blue Loan AI es una plataforma de inteligencia artificial 
-             que ayuda a las instituciones financieras a evaluar y gestionar 
-             préstamos azules. Su producto mínimo viable (MVP) identifica 
-             empresas prospectas para la colocación de estos préstamos, 
-             priorizando aquellas del sector de acuicultura en Ecuador. 
-             Al dirigir capital hacia estas iniciativas, la plataforma contribuye 
-             a acelerar la transición hacia una economía baja en carbono.""")
+    st.image('Datos/mangroove_swamp_1.jpg')
+
+    styled_text_introduccion = """
+    <div style="font-family: 'Courier New', monospace;">
+    Blue Loan AI es una plataforma de inteligencia artificial 
+    que ayuda a las instituciones financieras a identificar 
+    prospectos de empresas para la colocación de estos préstamos azules
+    </div>
+    """
+
+    # Mostrar el texto formateado
+    st.write(styled_text_introduccion, unsafe_allow_html=True)
     
 with st.sidebar.expander("Prospectos Principales"):
-    st.write(""" Corresponden a empresas certificadas por la Aquaculture Stewarship Council (ASC) 
-             en Ecuador que se encuentran económicamente activas. 
-             El mapa muestra su ubicación.""")
+    st.image('Datos/mangroove_swamp_2.jpg')
+    styled_text_prospectos_principales = """
+    <div style="font-family: 'Courier New', monospace;">
+    Corresponden a empresas certificadas por la Aquaculture Stewarship Council (ASC) 
+    en Ecuador que se encuentran económicamente activas. El mapa muestra su ubicación
+    </div>
+    """
+
+    # Mostrar el texto formateado
+    st.write(styled_text_prospectos_principales, unsafe_allow_html=True)
+
     
 with st.sidebar.expander("Análisis Económico-Financiero de los Prospectos"):
-    st.write(""" La aplicación selecciona empresas con características económico-financieras 
-             similares a los prospectos principales usando datos del 2023. Adicionalmente, realiza un análisis 
-             económico-financiero comparando la empresa prospecto principal seleccionada con 
-             los 4 prospectos más semejantes.""")
+    st.image('Datos/mangroove_swamp_3.jpg')
+
+    styled_text_analisis_economico = """
+    <div style="font-family: 'Courier New', monospace;">
+    La aplicación selecciona empresas con características económico-financieras 
+    similares a los prospectos principales usando datos del 2023
+    </div>
+    """
+
+    # Mostrar el texto formateado
+    st.write(styled_text_analisis_economico, unsafe_allow_html=True)
+
 
 with st.sidebar.expander("Fuentes de datos"):
-    st.write("""
-                
-1) https://www.supercias.gob.ec/portalscvs/index.htm
+    st.image('Datos/mangroove_swamp_4.jpg')
+    styled_text_datos = """
+    <div style="font-family: 'Courier New', monospace;">
+
+    1) https://shorturl.at/gpEJV
          
-2) https://asc-aqua.org/
-""")
+    2) https://asc-aqua.org/
+    </div>
+    """
+
+    # Mostrar el texto formateado
+    st.write(styled_text_datos, unsafe_allow_html=True)
+
 
 st.image('Datos/banner.png')
 
-st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL? """)
-#st.markdown()
-
+st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL?""") 
 
 # Mostrar la lista desplegable en la aplicación Streamlit
 
@@ -182,7 +207,7 @@ with tab1:
 
     # 1) Genera gráficos de barras para análisis de ingresos por ventas
 
-    colors = {'Si': 'blue', 'No': 'gray'}
+    colors = {'Si':'#4BC9FF', 'No':'#262730'}
 
     fig = px.bar(resultado_final, x='RUC', y='Ingresos por Ventas (USD)',
                 title="Comparación de ingresos por ventas entre prospectos",
@@ -199,7 +224,7 @@ with tab2:
 
     # 2) Genera gráficos de barras para análisis de activos
 
-    colors = {'Si': 'blue', 'No': 'gray'}
+    colors = {'Si':'#4BC9FF', 'No':'#262730'}
 
     fig = px.bar(resultado_final, x='RUC', y='Activos (USD)',
                 title="Comparación de activos entre prospectos",
@@ -216,7 +241,7 @@ with tab3:
 
     # 3) Genera gráficos de barras para análisis de utilidad neta
 
-    colors = {'Si': 'blue', 'No': 'gray'}
+    colors = {'Si':'#4BC9FF', 'No':'#262730'}
 
     fig = px.bar(resultado_final, x='RUC', y='Utilidad Neta (USD)',
                 title="Comparación de utilidad neta",
@@ -233,7 +258,7 @@ with tab4:
 
     # 4) Genera gráficos de barras para análisis de liquidez corriente
 
-    colors = {'Si': 'blue', 'No': 'gray'}
+    colors = {'Si':'#4BC9FF', 'No':'#262730'}
 
     fig = px.bar(resultado_final, x='RUC', y='Índice de Liquidez Corriente',
                 title="Comparación de liquidez corriente",
@@ -246,17 +271,39 @@ with tab4:
 
     st.plotly_chart(fig)
 
+# Estilo de dataframe en mode claro
+# with tab5:
+    
+#     st.write(""" #### Prospectos similares a los principales        
+#          """)
+
+#     # # Función para resaltar la fila que tiene el número de RUC seleccionado
+#     def color_coding(row):
+#         return ['background-color:yellow'] * len(row) if row.Nombre == selected_option else ['background-color:white'] * len(row)
+
+#     # # Aplicar el estilo personalizado al dataframe
+#     st.dataframe(resultado_final.style.apply(color_coding, axis=1))
+
+
 with tab5:
 
     st.write(""" #### Prospectos similares a los principales        
          """)
     
-    # Función para resaltar la fila que tiene el número de RUC seleccionado
-    def color_coding(row):
-        return ['background-color:yellow'] * len(row) if row.Nombre == selected_option else ['background-color:white'] * len(row)
+    #Define el estilo de dataframe para el modo oscuro
+    custom_css = """
+    <style>
+        .dataframe { /* Target the DataFrame */
+            background-color: #333; /* Change background color to dark gray */
+            color: white; /* Change text color to white */
+        }
+    </style>
+    """
 
-    # Aplicar el estilo personalizado al dataframe
-    st.dataframe(resultado_final.style.apply(color_coding, axis=1))
+    #Muestra el dataframe
+    st.write(resultado_final, unsafe_allow_html=True)
+    st.markdown(custom_css, unsafe_allow_html=True)  # Inject custom CSS
+
     
 st.write(""" ### UBICACIÓN PROSPECTOS PRINCIPALES """)  
 
