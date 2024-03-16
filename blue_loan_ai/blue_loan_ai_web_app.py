@@ -6,15 +6,19 @@ from sklearn.neighbors import NearestNeighbors
 import plotly.express as px
 import folium
 from streamlit_folium import st_folium
-
 import streamlit as st
+from pathlib import Path
 
 # Carga los datos del proyecto
-base_de_prospectos_principales = pd.read_csv("Datos/base_prospectos_principales.csv")
-coordenadas_prospectos_principales = pd.read_csv("Datos/coordenadas_empresas_certificadas.csv")
-datos_companias = pd.read_csv("Datos/datos_companias.csv") 
+
+PARENT_DIR = Path(__file__).parent.resolve().parent
+DATA_DIR = PARENT_DIR / "blue_loan_ai"/ "Datos" 
+
+base_de_prospectos_principales = pd.read_csv(DATA_DIR/"base_prospectos_principales.csv")
+coordenadas_prospectos_principales = pd.read_csv(DATA_DIR/"coordenadas_empresas_certificadas.csv")
+datos_companias = pd.read_csv(DATA_DIR/"datos_companias.csv") 
+compania = pd.read_csv(DATA_DIR/"bi_compania.csv") 
 datos_companias_certificadas = datos_companias[datos_companias["certificada"] == 1]
-compania = pd.read_csv("Datos/bi_compania.csv") 
 
 # Convierte los tipos de datos
 base_de_prospectos_principales["ruc"] = base_de_prospectos_principales['ruc'].astype(str)
@@ -24,7 +28,9 @@ coordenadas_prospectos_principales["longitude"] = coordenadas_prospectos_princip
 ## DESARROLLO DE LA APP
 with st.sidebar.expander("Introducción"):
     st.write(""" ## BLUE LOAN AI """)
-    st.image('Datos/mangroove_swamp_1.jpg')
+    image_path_1 = DATA_DIR / "mangroove_swamp_1.jpg"
+    image_path_str_1 = str(image_path_1)
+    st.image(image_path_str_1)
 
     styled_text_introduccion = """
     <div style="font-family: 'Courier New', monospace;">
@@ -38,7 +44,10 @@ with st.sidebar.expander("Introducción"):
     st.write(styled_text_introduccion, unsafe_allow_html=True)
     
 with st.sidebar.expander("Prospectos Principales"):
-    st.image('Datos/mangroove_swamp_2.jpg')
+    image_path_2 = DATA_DIR / "mangroove_swamp_2.jpg"
+    image_path_str_2 = str(image_path_2)
+    st.image(image_path_str_2)
+    
     styled_text_prospectos_principales = """
     <div style="font-family: 'Courier New', monospace;">
     Corresponden a empresas certificadas por la Aquaculture Stewarship Council (ASC) 
@@ -51,7 +60,9 @@ with st.sidebar.expander("Prospectos Principales"):
 
     
 with st.sidebar.expander("Análisis Económico-Financiero de los Prospectos"):
-    st.image('Datos/mangroove_swamp_3.jpg')
+    image_path_3 = DATA_DIR / "mangroove_swamp_3.jpg"
+    image_path_str_3 = str(image_path_3)
+    st.image(image_path_str_3)
 
     styled_text_analisis_economico = """
     <div style="font-family: 'Courier New', monospace;">
@@ -65,7 +76,10 @@ with st.sidebar.expander("Análisis Económico-Financiero de los Prospectos"):
 
 
 with st.sidebar.expander("Fuentes de datos"):
-    st.image('Datos/mangroove_swamp_4.jpg')
+    image_path_4 = DATA_DIR / "mangroove_swamp_4.jpg"
+    image_path_str_4 = str(image_path_4)
+    st.image(image_path_str_4)
+
     styled_text_datos = """
     <div style="font-family: 'Courier New', monospace;">
 
