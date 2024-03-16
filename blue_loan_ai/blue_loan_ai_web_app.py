@@ -92,8 +92,10 @@ with st.sidebar.expander("Fuentes de datos"):
     # Mostrar el texto formateado
     st.write(styled_text_datos, unsafe_allow_html=True)
 
+image_path_5 = DATA_DIR / "banner.png"
+image_path_str_5 = str(image_path_5)
+st.image(image_path_str_5)
 
-st.image('Datos/banner.png')
 
 #st.write(""" # ¿QUIÉN RECIBIRÁ EL PRÓXIMO CRÉDITO AZUL?""") 
 
