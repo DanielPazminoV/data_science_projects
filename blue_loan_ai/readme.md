@@ -29,6 +29,9 @@ Python 3 (Anaconda installation). Libraries: pandas, matplotlib, sklearn, plotly
 
 ## Enlaces 🔗
 
+[La aplicación se encuentra disponible para su uso en este enlace.](https://blueloanai.streamlit.app/)
+
+
 ## Objetivo 🎯
 
 Identificar prospectos de empresas del sector de acuicultura del Ecuador con potencial de recibir préstamos azules.
