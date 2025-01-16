@@ -23,9 +23,10 @@ The project is organized into the following Jupyter Notebook files:
 
 ## Requirements 🛠️
 
+- Google Earth Engine 
 - Python 3.8 or higher 🐍
 - Jupyter Notebook 📓
-- Key libraries: `numpy`, `pandas`, `matplotlib`, `seaborn`, `scipy`, `xarray` 📦
+- Key libraries: geemap, cartopy, matplotlib, seaborn, pandas, geopandas, numpy 📦
 
 Install the dependencies using:
 ```bash
