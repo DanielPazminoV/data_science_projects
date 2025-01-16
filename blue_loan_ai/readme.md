@@ -68,8 +68,6 @@ Blue Loan AI promotes the allocation of blue loans to companies in Ecuador's aqu
 
 The algorithm "K-Nearest Neighbors" is used to identify companies similar (neighbors in vector space) to those already accredited by the Aquaculture Stewardship Council (ASC). These data serve as a secondary "proxy" for assessing a company's ability to manage environmental projects.
 
-## Web Application 🌐
-
 ## MVP Limitations 🚦
 
 **Lack of access to environmental business databases**: A large-scale project will necessarily require generating national-level environmental business databases or investing in access to international APIs for comparison purposes. As such, results may serve as an approximation requiring personalized investigation for each prospect.
