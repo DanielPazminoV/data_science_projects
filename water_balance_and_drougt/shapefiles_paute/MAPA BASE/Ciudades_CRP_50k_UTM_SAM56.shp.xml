@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Universidad del Azuay - IERSE; Consejo de Gestión de Aguas de la Cuenca del Paute</origin>
+				<pubdate>2008</pubdate>
+				<title Sync="TRUE">Ciudades_CRP_50k_UTM_SAM56</title>
+				<edition>Segunda</edition>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<serinfo>
+					<sername>IERSE</sername>
+					<issue>Proyectos</issue>
+				</serinfo>
+				<pubinfo>
+					<pubplace>Cuenca</pubplace>
+					<publish>Universidad del Azuay</publish>
+				</pubinfo>
+				<onlink>http://www.uazuay.edu.ec/promsa/paute/home.htm</onlink>
+				<ftname Sync="TRUE">Ciudades_CRP_50k_UTM_SAM56</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>El mapa contiene las principales ciudades de la Cuenca del Río Paute, escala 1:50.000.  Fuente: Mapas Base del IGM a diferentes escalas</abstract>
+			<purpose>Recopilar información de las principales ciudades que confoman la Cuenca del Río Paute.</purpose>
+			<langdata Sync="TRUE">es</langdata><supplinf>El perímetro urbano de cada ciudad ha sido digitalizado sobre cartografía digital base del IGM a diferentes escalas: 1:50.000, 1:25.000 y 1:5.000.</supplinf></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>2004</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>completo</progress>
+			<update>al requerirse</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-79.071959</westbc>
+				<eastbc Sync="TRUE">-78.308416</eastbc>
+				<northbc Sync="TRUE">-2.501484</northbc>
+				<southbc Sync="TRUE">-3.051449</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">714388.410000</leftbc><rightbc Sync="TRUE">799206.492735</rightbc><bottombc Sync="TRUE">9662524.158265</bottombc><topbc Sync="TRUE">9723199.320000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>Diccionario de topicos</themekt>
+				<themekey>Ciudades</themekey>
+				<themekey>Cuenca del Paute</themekey>
+			</theme>
+			<place>
+				<placekt>Diccionario de Localidades</placekt>
+				<placekey>Cuenca</placekey><placekey>Azogues</placekey><placekey>Biblián</placekey><placekey>Cañar</placekey><placekey>Chordeleg</placekey><placekey>Cuenca</placekey><placekey>Déleg</placekey><placekey>El Pan</placekey><placekey>El Tambo</placekey><placekey>Guachapala</placekey><placekey>Gualaceo</placekey><placekey>Paute</placekey><placekey>Santiago de Méndez</placekey><placekey>Sevilla de Oro</placekey><placekey>Sígsig</placekey><placekey>Taday</placekey></place>
+		</keywords>
+		<accconst>
+Se podrá acceder a la información llenando un formulario digital que se encuentra en la dirección:
+http://www.uazuay.edu.ec
+</accconst>
+		<useconst>Se autoriza la reproducción total o parcial del mapa, siempre y cuando se cite la fuente de la siguiente manera:
+UDA-CGPaute, 2008.  Ciudades Principales de la Cuenca del Río Paute, Escala 1:50 000,
+Universidad del Azuay, 2008. Cuenca, Ecuador.
+Consejo de Gestión de Aguas de la Cuenca del Río Paute, 2008. Cuenca, Ecuador</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Universidad del Azuay</cntorg>
+					<cntper>Omar Delgado</cntper>
+				</cntorgp>
+				<cntpos>Profesor - Investigador</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>Av. 24 de Mayo 7-77</address>
+					<city>Cuenca</city>
+					<state>Azuay</state>
+					<postal>981</postal>
+					<country>Ecuador</country>
+				</cntaddr>
+				<cntvoice>593 07 2814 372</cntvoice>
+				<cntfax>593 07 2814 372</cntfax>
+				<cntemail>odelgado@uazuay.edu.ec</cntemail>
+				<cntemail>pochoa@uazuay.edu.ec</cntemail>
+				<hours>08H00 - 12H00 y 14H00 - 19H00</hours>
+			</cntinfo>
+		</ptcontac>
+		<browse>
+			<browsed>Ciudades Principales de la Cuenca del Río Paute. Escala 1: 50 000</browsed>
+			<browset>JPEG - Joint Photographic Experts Group format</browset>
+		</browse>
+		<datacred>Instituto Geográfico Militar
+Universidad del Azuay, Instituto de Estudios de Régimen Seccional del Ecuador (IERSE)
+Consejo de Gestión de Aguas de la Cuenca del Paute - CGPaute.  Cuenca, Ecuador.</datacred>
+		<secinfo>
+			<secclass>Unclassified</secclass>
+		</secinfo>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.2.0.1324</native>
+		<crossref>
+			<citeinfo>
+				<origin>Instituto Geográfico Militar</origin>
+				<pubdate>1994</pubdate>
+				<title>Cartografia base. IGM, escala 1:5 000</title>
+				<edition>primera</edition>
+				<geoform>map</geoform>
+				<onlink>http://www.igm.cl/</onlink>
+			</citeinfo>
+		</crossref>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>Instituto Geográfico Militar, Consejo de Programación de Obras Emergentes para el Paute.</origin>
+						<pubdate>1994</pubdate>
+						<title>Cartografía base. IGM, escala 1:5 000</title>
+						<edition>primera</edition>
+						<geoform>map</geoform>
+						<onlink>http://www.igm.cl/</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>1: 50 000; 1: 25 000; 1: 5 000</srcscale>
+				<typesrc>paper</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate></sngdate>
+					</timeinfo>
+					<srccurr>1994</srccurr>
+				</srctime>
+				<srccontr>Generación del Mapa</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>1.  Digitalización de la información en ArcGIS 9.2
+2.  Digitación de nombre de ciudad
+</procdesc>
+				<procdate>Unknown</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>Omar Delgado</cntper>
+							<cntorg>Universidad del Azuay</cntorg>
+						</cntperp>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>Av. 10 de Agosto</address>
+							<city>Cuenca</city>
+							<state>Azuay</state>
+							<postal>981</postal>
+							<country>Ecuador</country>
+						</cntaddr>
+						<cntvoice>593 07 2814 372</cntvoice>
+						<cntfax>593 07 2814 372</cntfax>
+						<cntemail>odelgado@uazuay.edu.ec</cntemail>
+						<hours>08H00 - 13H00 y 15H00 - 21H00</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused></srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset moved.</procdesc>
+				<srcused>D:\CRP\TEMPORAL\estaciones_metereorologicas</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\IERSE-~1\CONFIG~1\Temp\xml2B.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\IERSE-~1\CONFIG~1\Temp\xml3D.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\ierse\CONFIG~1\Temp\xml5A.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\ierse\CONFIG~1\Temp\xmlD5.tmp</srcused>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\ODELGA~1\CONFIG~1\Temp\xml18.tmp</srcused><date Sync="TRUE">20050830</date><time Sync="TRUE">12104900</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">D:\CRP_SAM56\GRAFICO\DPA\Ciudades_CRP_25k_SAM56</srcused><date Sync="TRUE">20080821</date><time Sync="TRUE">23273000</time></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<indspref>Ecuador, Azuay</indspref>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="Ciudades_CRP_50k_UTM_SAM56">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">15</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="Ciudades_CRP_50k_UTM_SAM56"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">15</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<gridsys><gridsysn Sync="TRUE">Universal Transverse Mercator</gridsysn><utm><utmzone Sync="TRUE">-17</utmzone><transmer><sfctrmer Sync="TRUE">0.999600</sfctrmer><longcm Sync="TRUE">-81.000000</longcm><latprjo Sync="TRUE">0.000000</latprjo><feast Sync="TRUE">500000.000000</feast><fnorth Sync="TRUE">10000000.000000</fnorth></transmer></utm></gridsys></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_Provisional_S_American_1956</horizdn>
+				<ellips Sync="TRUE">International_1924</ellips>
+				<semiaxis Sync="TRUE">6378388.000000</semiaxis>
+				<denflat Sync="TRUE">297.000000</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_Provisional_S_American_1956</geogcsn><projcsn Sync="TRUE">PSAD_1956_UTM_Zone_17S</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="Ciudades_CRP_50k_UTM_SAM56">
+			<enttyp>
+				<enttypl Sync="TRUE">Ciudades_CRP_50k_UTM_SAM56</enttypl>
+				<enttypd>Contiene los nombres de las ciudades</enttypd>
+				<enttypds>Cartas Topográficas, IGM</enttypds>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">15</enttypc></enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">FID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">CIUDAD</attrlabl>
+				<attrdef>Nombre de la ciudad</attrdef>
+				<attrdefs>IGM</attrdefs>
+				<attalias Sync="TRUE">CIUDAD</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth></attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Universidad del Azuay</cntorg>
+					<cntper>Omar Delgado</cntper>
+				</cntorgp>
+				<cntpos>Profesor - Investigador</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>Av. 24 de mayo 7-77</address>
+					<city>Cuenca</city>
+					<state>Azuay</state>
+					<postal>981</postal>
+					<country>Ecuador</country>
+				</cntaddr>
+				<cntvoice>593-7-814372</cntvoice>
+				<cntfax>593-7-814372</cntfax>
+				<cntemail>odelgado@uazuay.edu.ec</cntemail>
+				<hours>08H00 - 12H00 y 14H00 - 19H00</hours>
+			</cntinfo>
+		</distrib>
+		<distliab>La información ha sido confrontada con los mapas originales y cualquier omisión o incompatibilidad que exista se pide informar al IERSE</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>0,075</transize>
+					<dssize Sync="TRUE">0,017</dssize></digtinfo>
+			</digform>
+		</stdorder>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc></distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20081007</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Universidad del Azuay</cntorg>
+					<cntper>Patricia Quezada</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>Av. 24 de Mayo 7-77</address>
+					<city>Cuenca</city>
+					<state>Azuay</state>
+					<postal>981</postal>
+					<country>Ecuador</country>
+				</cntaddr>
+				<cntvoice>593-7-2814372</cntvoice>
+				<cntfax>593-7-2814372</cntfax>
+				<cntemail>pquezada@uazuay.edu.ec</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">es</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20080821</CreaDate><CreaTime>23273000</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20081007</SyncDate><SyncTime>13071600</SyncTime><ModDate>20081007</ModDate><ModTime>13071600</ModTime><MetaID>{190D3E55-2D88-4138-95C9-0BEAC76E67E9}</MetaID></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.2.0.1324</envirDesc><dataLang><languageCode Sync="TRUE" value="es"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">Ciudades_CRP_50k_UTM_SAM56</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">714388.41</westBL><eastBL Sync="TRUE">799206.492735</eastBL><northBL Sync="TRUE">9723199.32</northBL><southBL Sync="TRUE">9662524.158265</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-79.071959</westBL><eastBL Sync="TRUE">-78.308416</eastBL><northBL Sync="TRUE">-2.501484</northBL><southBL Sync="TRUE">-3.051449</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="es"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\ODELGADO\C$\CRP_SAM56_V3\GRAFICO\DPA\Ciudades_CRP_50k_UTM_SAM56.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0,017</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">PSAD_1956_UTM_Zone_17S</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="Ciudades_CRP_50k_UTM_SAM56"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">15</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20081007</mdDateSt></metadata>

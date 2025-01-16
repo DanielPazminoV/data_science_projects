@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Universidad del Azuay - IERSE; Consejo de Gestión de Aguas de la Cuenca del Paute</origin>
+				<pubdate>2004</pubdate>
+				<title Sync="TRUE">Cantones_CRP_250k_UTM_SAM56</title>
+				<edition>Segunda</edition>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<serinfo>
+					<sername>IERSE</sername>
+					<issue>Proyectos</issue>
+				</serinfo>
+				<pubinfo>
+					<pubplace>Cuenca</pubplace>
+					<publish>Universidad del Azuay</publish>
+				</pubinfo>
+				<onlink>http://www.uazuay.edu.ec/geomatica/source/web/home.html</onlink>
+				<ftname Sync="TRUE">Cantones_CRP_250k_UTM_SAM56</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>El mapa contiene la División Político Administrativa a nivel de cantón correspondiente a la Cuenca del Río Paute, escala 1:250 000.  Fuente: Cartografía Base Digital, escala 1:250.000 de las provincias de Azuay, Cañar y Morona Santiago,  Instituto Geográfico Militar IGM</abstract>
+			<purpose>Recopilar información de los cantones que conforma la cuenca del Paute</purpose>
+			<langdata Sync="TRUE">es</langdata><supplinf>La información de Límites Políticos de los Cantones de la Cuenca del Paute, esta construído en base a la cartografía base digital de las provincias de Azuay, Cañar y Morona Santiago a escala 1:250.000;  adquirida por el CGPaute al IGM .</supplinf></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>2004</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>completo</progress>
+			<update>al requerirse</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-79.363242</westbc>
+				<eastbc Sync="TRUE">-78.267514</eastbc>
+				<northbc Sync="TRUE">-2.297733</northbc>
+				<southbc Sync="TRUE">-3.270643</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">682016.509094</leftbc><rightbc Sync="TRUE">803693.125122</rightbc><bottombc Sync="TRUE">9638339.333130</bottombc><topbc Sync="TRUE">9745737.080322</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>Diccionario de topicos</themekt>
+				<themekey>División Político Administrativa Cantonal</themekey>
+				<themekey>Cantones</themekey>
+				<themekey>Cuenca del Paute</themekey>
+			</theme>
+			<place>
+				<placekt>Diccionario de Localidades</placekt>
+				<placekey>Azogues</placekey><placekey>Biblián</placekey><placekey>Cañar</placekey><placekey>Chordeleg</placekey><placekey>Cuenca</placekey><placekey>Déleg</placekey><placekey>El Pan</placekey><placekey>Guachapala</placekey><placekey>Gualaceo</placekey><placekey>Limón Indanza</placekey><placekey>Morona</placekey><placekey>Paute</placekey><placekey>Santiago</placekey><placekey>Sevilla de Oro</placekey><placekey>Sígsig</placekey><placekey>Sucúa</placekey><placekey>Azuay</placekey><placekey>Cañar</placekey><placekey>Morona Santiago</placekey></place>
+		</keywords>
+		<accconst>
+Se podrá acceder a la información llenado un formulario digital que se encuentra en la dirección:
+http://www.uazuay.edu.ec
+</accconst>
+		<useconst>Se autoriza la reproducción total o parcial del mapa siempre y cuando se cite la fuente de la siguiente manera:
+UDA - CGPaute, 2008. División Político Administrativa Cantonal de la Cuenca del Río Paute. Escala 1:250 000,
+Fuente: Instituto Geográfico Militar, IGM</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Universidad del Azuay</cntorg>
+					<cntper>Omar Delgado</cntper>
+				</cntorgp>
+				<cntpos>Profesor - Investigador</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>Av. 24 de Mayo 7-77</address>
+					<city>Cuenca</city>
+					<state>Azuay</state>
+					<postal>981</postal>
+					<country>Ecuador</country>
+				</cntaddr>
+				<cntvoice>593 07 2814 372</cntvoice>
+				<cntfax>593 07 2814 372</cntfax>
+				<cntemail>odelgado@uazuay.edu.ec</cntemail>
+				<cntemail>pochoa@uazuay.edu.ec</cntemail>
+				<hours>08H00 - 12H00 y 14H00 - 19H00</hours>
+			</cntinfo>
+		</ptcontac>
+		<browse>
+			<browsed>División Político Administrativa Cantonal de la Cuenca del Río Paute. Escala 1:250 000</browsed>
+			<browset>JPEG - Joint Photographic Experts Group format</browset>
+		</browse>
+		<datacred>nstituto Geográfico Militar, IGM
+Universidad del Azuay, 2008</datacred>
+		<secinfo>
+			<secclass>Unclassified</secclass>
+		</secinfo>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.2.0.1324</native>
+		<crossref>
+			<citeinfo>
+				<origin>ODEPLAN - INFOPLAN</origin>
+				<pubdate>2002</pubdate>
+				<pubtime>Unknown</pubtime>
+				<title>Mapas de las Provincias de Azuay, Cañar y Morona Santiago</title>
+				<edition>version 2.0</edition>
+				<geoform>vector digital data</geoform>
+			</citeinfo>
+		</crossref>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<logic>1.  Selección en archivos DGN de límites políticos de las provincias de Azuay, Cañar y Morona Santiago
+2.  Conversión de datos desde formato DGN a formato SHAPE
+3.  Edición y poligonización de los cantones de las tres provincias
+4.  Union de los archivos de cantones de las tres provincias
+5.  Recorte de los poligonos de cantones con el límite de la Cuenca del Paute
+6.  Edición y depuración de la información cantonal con respecto al límite de la Cuenca del Paute
+7.  Agregación de campos de atributos con nombre de cantón, provincia, región, código de cantón y superficie en hectáreas.</logic>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<edition>2.0</edition>
+						<geoform>multimedia presentation</geoform>
+					</citeinfo>
+				</srccite>
+				<srcscale>1:250 000</srcscale>
+				<typesrc>computer program</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>2004</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+				<srccitea>Mapa Base Digital de las Provincias de Azuay, Cañar y Morona Santiago, escala 1:250.000</srccitea>
+				<srccontr>Generación de la Información</srccontr>
+			</srcinfo>
+			<procstep>
+				<proccont>
+					<cntinfo>
+						<cntorgp>
+							<cntorg>Universidad del Azuay</cntorg>
+							<cntper>Omar Delgado</cntper>
+						</cntorgp>
+						<cntpos>Profesor - Investigador</cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>Av. 24 de Mayo 7-77</address>
+							<city>Cuenca</city>
+							<state>Azuay</state>
+							<postal>981</postal>
+							<country>Ecuador</country>
+						</cntaddr>
+						<cntvoice>593 07 2814 372</cntvoice>
+						<cntfax>593 07 2814 372</cntfax>
+						<cntemail>odelgado@uazuay.edu.ec</cntemail>
+						<hours>08H00 - 12H00 y 14H00 - 19H00</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused></srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset moved.</procdesc>
+				<srcused>D:\CRP\TEMPORAL\estaciones_metereorologicas</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\IERSE-~1\CONFIG~1\Temp\xml2B.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\IERSE-~1\CONFIG~1\Temp\xml15.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\ierse\CONFIG~1\Temp\xmlD4.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\ODELGA~1\CONFIG~1\Temp\xml17.tmp</srcused>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\adm\CONFIG~1\Temp\xml4B7.tmp</srcused><date Sync="TRUE">20080821</date><time Sync="TRUE">16090900</time></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<indspref>Ecuador, Azuay</indspref>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="Cantones_CRP_250k_UTM_SAM56">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">16</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="Cantones_CRP_250k_UTM_SAM56"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">16</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<gridsys><gridsysn Sync="TRUE">Universal Transverse Mercator</gridsysn><utm><utmzone Sync="TRUE">-17</utmzone><transmer><sfctrmer Sync="TRUE">0.999600</sfctrmer><longcm Sync="TRUE">-81.000000</longcm><latprjo Sync="TRUE">0.000000</latprjo><feast Sync="TRUE">500000.000000</feast><fnorth Sync="TRUE">10000000.000000</fnorth></transmer></utm></gridsys></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_Provisional_S_American_1956</horizdn>
+				<ellips Sync="TRUE">International_1924</ellips>
+				<semiaxis Sync="TRUE">6378388.000000</semiaxis>
+				<denflat Sync="TRUE">297.000000</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_Provisional_S_American_1956</geogcsn><projcsn Sync="TRUE">PSAD_1956_UTM_Zone_17S</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="Cantones_CRP_250k_UTM_SAM56">
+			<enttyp>
+				<enttypl Sync="TRUE">Cantones_CRP_250k_UTM_SAM56</enttypl>
+				<enttypd>Contiene el nombre del cantón, con su respectiva provincia y región</enttypd>
+				<enttypds>Mapas Base de las provincias de Azuay, Cañar y Morona Santiago</enttypds>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">16</enttypc></enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">FID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">FID_Provin</attrlabl>
+				<attalias Sync="TRUE">FID_Provin</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr>
+			<attr>
+				<attrlabl Sync="TRUE">CODIGO</attrlabl>
+				<attrdef>Código del Cantón, según INEC</attrdef>
+				<attrdefs>INEC</attrdefs>
+				<attalias Sync="TRUE">CODIGO</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">6</attwidth></attr>
+			<attr>
+				<attrlabl Sync="TRUE">NOMBRE</attrlabl>
+				<attrdef>Nombre de cantón</attrdef>
+				<attrdefs>INEC</attrdefs>
+				<attalias Sync="TRUE">NOMBRE</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth></attr>
+			<attr>
+				<attrlabl Sync="TRUE">PROVINCIA</attrlabl>
+				<attrdef>Provincia a la que pertenece el cantón</attrdef>
+				<attrdefs>INEC</attrdefs>
+				<attalias Sync="TRUE">PROVINCIA</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth></attr>
+			<attr>
+				<attrlabl Sync="TRUE">REGION</attrlabl>
+				<attalias Sync="TRUE">REGION</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">15</attwidth><attrdef>Región a la que pertenece el cantón</attrdef><attrdefs>INEC</attrdefs></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Area_ha</attrlabl>
+				<attalias Sync="TRUE">Area_ha</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth><atnumdec Sync="TRUE">2</atnumdec><attrdef>Superficie en hectáreas</attrdef><attrdefs>Cálculo de Geometría con ArcGIS 9.2</attrdefs></attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Universidad del Azuay</cntorg>
+					<cntper>Omar Delgado</cntper>
+				</cntorgp>
+				<cntpos>Profesor - Investigador</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>Av. 24 de mayo 7-77</address>
+					<city>Cuenca</city>
+					<state>Azuay</state>
+					<postal>981</postal>
+					<country>Ecuador</country>
+				</cntaddr>
+				<cntvoice>593-7-814372</cntvoice>
+				<cntfax>593-7-814372</cntfax>
+				<cntemail>odelgado@uazuay.edu.ec</cntemail>
+				<cntemail>pochoa@uazuay.edu.ec</cntemail>
+				<hours>08H00 - 12H00 y 14H00 - 19H00</hours>
+			</cntinfo>
+		</distrib>
+		<distliab>La información ha sido confrontada con los mapas originales y cualquier omisión o incompatibilidad que exista se pide informar al IERSE</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>0,075</transize>
+					<dssize Sync="TRUE">0,226</dssize></digtinfo>
+			</digform>
+		</stdorder>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc></distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20090608</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Universidad del Azuay</cntorg>
+					<cntper>Patricia Quezada</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>Av. 24 de Mayo 7-77</address>
+					<city>Cuenca</city>
+					<state>Azuay</state>
+					<postal>981</postal>
+					<country>Ecuador</country>
+				</cntaddr>
+				<cntvoice>593-7-814372</cntvoice>
+				<cntfax>593-7-814372</cntfax>
+				<cntemail>pquezada@uazuay.edu.ec</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">es</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><MetaID>{8D7E0C5C-1502-473D-8DBC-D9F131AE7CD5}</MetaID><CreaDate>20080821</CreaDate><CreaTime>16090900</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20090608</SyncDate><SyncTime>16363100</SyncTime><ModDate>20090608</ModDate><ModTime>16363100</ModTime></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.2.0.1324</envirDesc><dataLang><languageCode Sync="TRUE" value="es"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">Cantones_CRP_250k_UTM_SAM56</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">682016.509094</westBL><eastBL Sync="TRUE">803693.125122</eastBL><northBL Sync="TRUE">9745737.080322</northBL><southBL Sync="TRUE">9638339.33313</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-79.363242</westBL><eastBL Sync="TRUE">-78.267514</eastBL><northBL Sync="TRUE">-2.297733</northBL><southBL Sync="TRUE">-3.270643</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="es"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\ODELGADO\C$\CRP_SAM56_V3\GRAFICO\DPA\Cantones_CRP_250k_UTM_SAM56.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0,226</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">PSAD_1956_UTM_Zone_17S</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="Cantones_CRP_250k_UTM_SAM56"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">16</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20090608</mdDateSt></metadata>
