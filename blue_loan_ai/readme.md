@@ -1,6 +1,6 @@
 # Blue Loan AI 🌊💲
 
-Blue Loan AI es una plataforma de inteligencia artificial diseñada para ayudar a las instituciones financieras a evaluar y gestionar préstamos azules. 
+Blue Loan AI is an artificial intelligence platform designed to help financial institutions evaluate and manage blue loans.
 
 ## Skillset ⚒️
 
@@ -27,59 +27,52 @@ Python 3 (Anaconda installation). Libraries: pandas, matplotlib, sklearn, plotly
   ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
   ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 
-## Enlaces 🔗
+## Links 🔗
 
-[La aplicación se encuentra disponible para su uso en este enlace.](https://blueloanai.streamlit.app/)
+[The application is available for use at this link.](https://blueloanai.streamlit.app/)
 
+## Objective 🎯
 
-## Objetivo 🎯
+Identify prospective companies in Ecuador's aquaculture sector with potential for receiving blue loans.
 
-Identificar prospectos de empresas del sector de acuicultura del Ecuador con potencial de recibir préstamos azules.
+## Scope 📐
 
-## Alcance 📐
+In its minimum viable product (MVP) version, Blue Loan AI identifies prospective companies for blue loan placement.
 
-En su versión de producto mínimo viable (MVP), Blue Loan AI identifica empresas prospectos para la colocación de préstamos azules.
+## Data Sources 🗃️
 
-## Fuentes de datos 🗃️
+For this MVP, two datasets were used:
 
-Para este MVP se utilizaron dos bases de datos:
+1. Records from the Superintendence of Companies of Ecuador.
+2. Companies in Ecuador certified by the "Aquaculture Stewardship Council" (ASC).
 
-1.- Registros de la Superintendencia de Compañías de Ecuador.
-2.- Empresas de Ecuador que han obtenido una certificación con el "Aquaculture Stewarship Council" (ASC).
+The data from the Superintendence of Companies of Ecuador was downloaded from the website: https://appscvsmovil.supercias.gob.ec/ranking/reporte.html. The data corresponds to the 2023 records.
 
-Los datos de la Superintendencia de Compañias de Ecuador fueron descargados de la página: https://appscvsmovil.supercias.gob.ec/ranking/reporte.html. Los datos corresponden a los registros del año 2023.
+Regarding the ASC companies' data, it was obtained from their website: https://asc-aqua.org/
 
-En cuanto a los datos de las empresas del ASC, los mismos se obtuvieron de su página web: https://asc-aqua.org/
+## Context 📚
 
-## Contexto 📚
+The term "blue finance" refers to an investment and financial management approach that prioritizes environmental sustainability and social responsibility. This concept arises in response to the growing awareness of the negative impact that economic activities can have on the environment and local communities.
 
-El término "finanzas azules" se refiere a un enfoque de inversión y gestión financiera que prioriza la sostenibilidad ambiental y la responsabilidad social. Este concepto surge en respuesta a la creciente conciencia sobre el impacto negativo que las actividades económicas pueden tener en el medio ambiente y en las comunidades locales.
+The color "blue" is commonly associated with water and the environment, emphasizing the importance of protecting natural resources, especially those related to water, such as seas, oceans, rivers, and lakes.
 
-El color "azul" se asocia comúnmente con el agua y el medio ambiente, por lo que el término "finanzas azules" enfatiza la importancia de proteger los recursos naturales, especialmente los relacionados con el agua, como mares, océanos, ríos y lagos.
+Blue finance addresses both mitigation and adaptation to climate change by financing projects and businesses that promote water resource conservation, sustainable ocean management, pollution reduction, and clean technology promotion.
 
-Las finanzas azules abordan tanto la mitigación como la adaptación al cambio climático, financiando proyectos y empresas que promueven la conservación de los recursos hídricos, la gestión sostenible de los océanos, la reducción de la contaminación del agua y la promoción de tecnologías limpias.
+This approach also considers the importance of local communities and the rights of populations dependent on marine and aquatic resources for their livelihoods. Therefore, blue finance may include investments in projects that foster social equity, local job creation, and empowerment of coastal communities.
 
-Este enfoque también considera la importancia de las comunidades locales y los derechos de las poblaciones que dependen de los recursos marinos y acuáticos para su sustento. Por lo tanto, las finanzas azules pueden incluir inversiones en proyectos que fomenten la equidad social, la creación de empleo local y el empoderamiento de las comunidades costeras.
+## Project Impact 💥
 
-## Impacto del Projecto 💥
+Blue Loan AI promotes the allocation of blue loans to companies in Ecuador's aquaculture sector. By directing capital towards these initiatives, the platform accelerates the transition to a low-carbon economy.
 
-BlueLoan AI promueve la asignación de préstamos azules a empresas del sector de acuicultura en Ecuador. 
-Al dirigir capital hacia estas iniciativas, la plataforma acelera la transición hacia una economía baja en carbono.
+## Machine Learning Model 📈
 
-## Modelo de Machine Learning 📈
+The algorithm "K-Nearest Neighbors" is used to identify companies similar (neighbors in vector space) to those already accredited by the Aquaculture Stewardship Council (ASC). These data serve as a secondary "proxy" for assessing a company's ability to manage environmental projects.
 
-Utiliza el algoritmo “K neareast Neighbors” para identificar compañías similares (vecinas en el espacio vectorial) 
-a aquellas que ya han recibido una acreditción del Aquaculture Stwewarshiop Council (ASC)”. 
-Se utilizan estos datos como un segundo “proxy”, de la capacidad de la empresa de gestionar proyectos ambientales.
+## Web Application 🌐
 
-## Aplicación Web 🌐
+## MVP Limitations 🚦
 
-## Limitaciones MVP 🚦
+**Lack of access to environmental business databases**: A large-scale project will necessarily require generating national-level environmental business databases or investing in access to international APIs for comparison purposes. As such, results may serve as an approximation requiring personalized investigation for each prospect.
 
-**Falta de acceso a bases de datos ambientales empresariales**: Un proyecto a gran escala necesitará necesariamente la generación 
-de bases de datos ambientales empresarias a nivel nacional. O en su defecto, la inversión para el acceso a APIs internacionales que permitan 
-hacer una comparación. En ese sentido, los resultados resultarían ser una aproximación que requerirá una investigación personalizada de cada prospecto. 
+**Lack of labeled data**: Since there is no information on which companies have already received blue loans, predictive modeling using most machine learning algorithms cannot be applied. Consequently, "K-Nearest Neighbors" is applied to find similar companies using the limited labeled data available.
 
-**Falta de datos etiquetados**: En virtud de que no se cuenta con información de que empresas ya han recibido préstamos azules, 
-no se puede realizar una modelación predictiva supervisada con la mayoría de algoritmos de machine learning. 
-En ese sentido se optará por aplicar “K nearest neiborhs” para buscar empresas similares con los pocos datos etiquetados con los que se cuentan.
