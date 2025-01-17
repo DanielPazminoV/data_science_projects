@@ -67,7 +67,7 @@ Open the .ipynb files in Jupyter Notebook or JupyterLab.
 
 🚀 Follow the instructions in each notebook to reproduce the results.
 
-🎯 **Expected Results**
+🎯 **Results**
 
 Land Cover Classification: 🗺️ Classification maps with clusters representing different types of terrain.
 
