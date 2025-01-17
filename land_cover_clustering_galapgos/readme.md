@@ -1,6 +1,6 @@
-🌎 #Land Cover Classification and Clustering Project in the Galapagos Islands
+🌎 **Land Cover Classification and Clustering Project in the Galapagos Islands**
 
-📝 ##General Description
+📝 **General Description**
 
 This project includes implementations for land cover classification in the Galapagos Islands using clustering algorithms. The techniques employed include:
 
@@ -10,7 +10,7 @@ This project includes implementations for land cover classification in the Galap
 
 The provided notebooks explore approaches using both cloud-based tools (GEE) and local Python libraries.
 
-📁 Project Content
+📁 **Project Content**
 
 1. 📜 Clustering_land_cover_classification_GEE_Galapagos.ipynb
 
@@ -26,7 +26,7 @@ Highlighted Functions:
 
 ☁️ mask_s2_clouds: Custom function to filter clouds in Sentinel-2 images.
 
-2. 🖥️ Simple_sklearn_cluster_algorithm_Galapgos.ipynb
+2. 🖥️ **Simple_sklearn_cluster_algorithm_Galapgos.ipynb**
 
 Purpose: Apply the KMeans algorithm using locally processed data.
 
@@ -38,26 +38,26 @@ Key Technologies:
 
 📊 matplotlib and numpy for visualization and data manipulation.
 
-⚙️ Requirements
+⚙️ **Requirements**
 
 To run the notebooks, ensure the following dependencies are installed:
 
 🐍 Python 3.8+
 
-📦 Required libraries:
+📦 **Required libraries:**
 
 pip install numpy matplotlib sklearn rasterio osgeo geemap earthengine-api
 
 🌐 An account enabled to use Google Earth Engine (required for the first notebook).
 
-▶️ Execution
+▶️ **Execution**
 
 🔄 Clone this repository:
 
 git clone <repository-URL>
 cd <repository-name>
 
-🏃‍♂️ Run the notebooks:
+🏃‍♂️ **Run the notebooks:**
 
 For the GEE-based notebook, make sure to log in:
 
@@ -67,7 +67,7 @@ Open the .ipynb files in Jupyter Notebook or JupyterLab.
 
 🚀 Follow the instructions in each notebook to reproduce the results.
 
-🎯 Expected Results
+🎯 **Expected Results**
 
 Land Cover Classification: 🗺️ Classification maps with clusters representing different types of terrain.
 
