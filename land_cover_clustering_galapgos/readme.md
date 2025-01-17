@@ -1,6 +1,6 @@
-🌎 Land Cover Classification and Clustering Project in the Galapagos Islands
+🌎 # Land Cover Classification and Clustering Project in the Galapagos Islands
 
-📝 General Description
+📝 ## General Description
 
 This project includes implementations for land cover classification in the Galapagos Islands using clustering algorithms. The techniques employed include:
 
